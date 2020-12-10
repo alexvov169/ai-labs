@@ -123,47 +123,6 @@ double fitness(double y, double denominator) {
 }
 
 bool enough_density(double delta, const population_type& p, size_t needed_close_points) {
-    /**
-     * sum dxi^2 < (sum dxi)^2
-     * if sum dxi^2 < delta then if (sum dxi)^2 < delta then sum dxi^2 < delta
-     * then we need to evaluate just (abs (sum dxi) < sqrt delta)
-     **/
-    /*double sqrt_delta = sqrt(delta);
-    size_t needed_close_points = close_fract * p.size();
-    if (needed_close_points == 0) needed_close_points = 1;
-    for (size_t k = 0; k < p.size(); ++k) {
-    //return any_of(p.begin(), p.end(), [](const fenotype_ptr& xs) { return xs->back() > 0.9; });
-    //auto good = find_if(p.begin(), p.end(), [](const fenotype_ptr& xs) { return xs->back() > 0.9; });
-    //if (good != p.end()) {
-    //    size_t k = good - p.begin();
-        size_t close_points_count = 0;
-        for (size_t j = 0; j < k; ++j) {
-            double diff = 0;
-            for (size_t i = 0; i < p[k]->size(); ++i) {
-                double d = (*p[k])[i] - (*p[j])[i];
-                diff += d;
-            }
-            if (fabs(diff) < sqrt_delta) {
-                ++close_points_count;
-            }
-        }
-        for (size_t j = k; j < p.size(); ++j) {
-            double diff = 0;
-            for (size_t i = 0; i < p[k]->size(); ++i) {
-                double d = (*p[k])[i] - (*p[j])[i];
-                diff += d;
-            }
-            if (fabs(diff) < sqrt_delta) {
-                ++close_points_count;
-            }
-        }
-        if (close_points_count > needed_close_points) {
-            return true;
-        }
-        //return true;
-    }
-    return false;*/
-
     if (needed_close_points == 0) needed_close_points = 1;
     for (size_t k = 0; k < p.size(); ++k) {
         size_t close_points_count = 0;
