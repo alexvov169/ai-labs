@@ -1,2 +1,2 @@
 # ai-labs
-Labs covering genetic algorithms and prolog
+Labs covering genetic algorithms and machine learning
