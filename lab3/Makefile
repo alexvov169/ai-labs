@@ -6,7 +6,7 @@ OBJS := $(SOURCES:.cpp=.o)
 all: $(BIN)
 
 check: $(BIN)
-	./$(BIN)
+	printf "10\n" | ./$(BIN)
 
 .cpp.o:
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@

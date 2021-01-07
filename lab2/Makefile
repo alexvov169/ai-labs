@@ -1,4 +1,4 @@
-SOURCES := main.cpp aco.cpp aco.h ant.cpp
+SOURCES := main.cpp aco.cpp ant.cpp
 BIN := main
 # Objs are all the sources, with .cpp replaced by .o
 OBJS := $(SOURCES:.cpp=.o)
@@ -6,7 +6,7 @@ OBJS := $(SOURCES:.cpp=.o)
 all: $(BIN)
 
 check: $(BIN)
-	./$(BIN)
+	printf "runall\n" | ./$(BIN)
 
 .cpp.o:
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
