@@ -1,5 +1,5 @@
-SOURCES := lab1/main.cpp
-BIN := lab1/main
+SOURCES := main.cpp
+BIN := main
 # Objs are all the sources, with .cpp replaced by .o
 OBJS := $(SOURCES:.cpp=.o)
 
