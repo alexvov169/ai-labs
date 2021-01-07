@@ -1,4 +1,4 @@
-SOURCES := main.cpp aco.cpp aco.h ant.cpp ant.h
+SOURCES := main.cpp aco.cpp aco.h ant.cpp
 BIN := main
 # Objs are all the sources, with .cpp replaced by .o
 OBJS := $(SOURCES:.cpp=.o)
