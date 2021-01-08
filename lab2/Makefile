@@ -5,6 +5,9 @@ OBJS := $(SOURCES:.cpp=.o)
 
 all: $(BIN)
 
+exam: $(BIN)
+	printf "ovX4.aco\n0\n8\n10\n1\n1\n0.99\n100\n5\n" | ./$(BIN)
+
 check: $(BIN)
 	printf "runall\n" | ./$(BIN)
 
